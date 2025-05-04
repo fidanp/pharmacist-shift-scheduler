@@ -1,0 +1,18 @@
+{
+    "pharmacist": "Pharmacist",
+    "pharmacist_title": "Pharmacist",
+    "pharmacist_description": "A new Flutter project.",
+    "home": "Home",
+    "schedule": "Schedule",
+    "summary": "Summary",
+    "noOfPharmacists": "No of Pharmacists",
+    "selectMonth": "Select Month",
+    "error": "Error",
+    "couldNotReadExcelFile": "Could not read Excel file",
+    "noFileSelectedOrInvalidFile": "No file selected or invalid file",
+    "enterPharmacistNames": "Enter Pharmacist Names",
+    "importFromExcel": "Import From Excel",
+    "scheduled": "Scheduled",
+    "notScheduled": "Not Scheduled",
+    "or": "or"
+}

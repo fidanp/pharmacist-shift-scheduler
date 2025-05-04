@@ -1,0 +1,18 @@
+{
+    "pharmacist": "صيدلي",
+    "pharmacist_title": "صيدلي",
+    "pharmacist_description": "مشروع جديد للتطبيق.",
+    "home": "الصفحة الرئيسية",
+    "schedule": "الجدول",
+    "summary": "الملخص",
+    "noOfPharmacists": "عدد الصيدليين",
+    "selectMonth": "حدد الشهر",
+    "error": "خطأ",
+    "couldNotReadExcelFile": "لا يمكن قراءة ملف Excel",
+    "noFileSelectedOrInvalidFile": "لم يتم اختيار ملف او ملف غير صحيح",
+    "enterPharmacistNames": "ادخل اسماء الصيدليين",
+    "importFromExcel": "استيراد من Excel",
+    "scheduled": "مجدول",
+    "notScheduled": "غير مجدول",
+    "or": "او"
+}
