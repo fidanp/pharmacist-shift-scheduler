@@ -83,6 +83,7 @@ https://drive.google.com/drive/folders/1wo-A59u0vYEGYOmtfpvUVmeU4jUWAuhF
 
 ## APK
 release/app-release.apk
+https://drive.google.com/file/d/1CZcelbNzWN7xevYHRZirIVd1QgK_LgbV/view?usp=drive_link
 
 ## Tested
 Tested in both Android and iOS
