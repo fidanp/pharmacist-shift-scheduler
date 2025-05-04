@@ -6,21 +6,23 @@ The Pharmacist Shift Scheduler is an application designed to assign pharmacists 
 ## Tech Stack
 - Flutter
 - Dart
-- GetX for state management
+- GetX for state management, routing, and dependency injection
+- Hive for local db
 
 ## Installation
 1. Clone the repository:
-    ```bash
     git clone https://github.com/fidanp/pharmacist-shift-scheduler.git
-    ```
+
+    or unzip the zip file shared and open terminal in the folder
+
 2. Install dependencies:
-    ```bash
+ 
     flutter pub get
-    ```
+
 3. Run the app:
-    ```bash
+
     flutter run
-    ```
+
 
 ## Usage
 1. Open the app and input the list of pharmacists or import from excel with names of pharmacist on a column.
@@ -31,6 +33,7 @@ The Pharmacist Shift Scheduler is an application designed to assign pharmacists 
 - **Shift Assignment**: Fair distribution of Morning, Afternoon, and Evening shifts.
 - **Weekend Shift Handling**: Special consideration for weekend shifts.
 - **Dynamic Scheduling**: The app supports any number of pharmacists.
+- **Language & Theme Switching**: Toggle between English/Arabic and light/dark themes via the Settings icon in the AppBar.
 
 ## Code Quality
 The code is structured in a modular fashion, with separate files for shift scheduling logic, UI, and controllers. Error handling is implemented to ensure smooth scheduling.
@@ -75,16 +78,8 @@ Final Schedule:
 
 The final schedule for the entire month is generated, ensuring that each pharmacist works a similar number of shifts, including weekend shifts, while keeping the distribution as fair as possible.
 
-## Language & Theme Switching
-
-Accessible from the top right AppBar (Settings icon)
-
-change language- en and ar
-Toggle between Light and Dark themes
-
 ## Screen recording
 https://drive.google.com/drive/folders/1wo-A59u0vYEGYOmtfpvUVmeU4jUWAuhF
 
 ## APK
-
 release/app-release.apk
