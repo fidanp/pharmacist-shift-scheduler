@@ -75,3 +75,16 @@ Final Schedule:
 
 The final schedule for the entire month is generated, ensuring that each pharmacist works a similar number of shifts, including weekend shifts, while keeping the distribution as fair as possible.
 
+## Language & Theme Switching
+
+Accessible from the top right AppBar (Settings icon)
+
+change language- en and ar
+Toggle between Light and Dark themes
+
+## Screen recording
+https://drive.google.com/drive/folders/1wo-A59u0vYEGYOmtfpvUVmeU4jUWAuhF
+
+## APK
+
+release/app-release.apk
