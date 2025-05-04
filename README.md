@@ -45,7 +45,7 @@ The app supports any number of pharmacists and dynamically adjusts the schedule 
 - No automated optimization for pharmacist preferences (ie, preferred shifts).
 - Weekends are assigned based on availability rather than preference.
 
-### Scheduling Algorithm
+## Scheduling Algorithm
 The goal of this scheduling algorithm is to fairly assign pharmacists to shifts, ensuring that each one works an equal number of shifts throughout the month. The algorithm uses a round-robin approach, ie it rotates through the list of pharmacists to assign them to different shifts each day.
 
 Initialization:
@@ -83,3 +83,6 @@ https://drive.google.com/drive/folders/1wo-A59u0vYEGYOmtfpvUVmeU4jUWAuhF
 
 ## APK
 release/app-release.apk
+
+## Tested
+Tested in both Android and iOS
