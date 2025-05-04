@@ -63,7 +63,7 @@ void generateAndSharePdf(Map<String, Map<String, int>> summary) async {
             final data = entry.value;
             return [
               entry.key,
-              '${data['Total']}',
+              '${data['TotalShifts']}',
               '${data['Morning']}',
               '${data['Afternoon']}',
               '${data['Evening']}',

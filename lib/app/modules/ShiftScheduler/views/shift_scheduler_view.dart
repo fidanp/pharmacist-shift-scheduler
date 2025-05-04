@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
+import 'package:pharmacist/app/global/controllers/language_controller.dart';
+import 'package:pharmacist/app/theme/theme_controller.dart';
 
 import '../../../global/widgets/date_picker.dart';
 import '../controllers/shift_scheduler_controller.dart';
@@ -21,7 +23,63 @@ class ShiftSchedulerView extends GetView<ShiftSchedulerScreenController> {
         centerTitle: true,
         elevation: 0,
         backgroundColor: theme.primaryColor,
+        actions: [
+          IconButton(
+            icon: Icon(Icons.settings),
+            onPressed: () {
+              // Open a dialog or show a settings menu
+              showDialog(
+                context: context,
+                builder:
+                    (context) => AlertDialog(
+                      title: Text(
+                        'settings'.tr,
+                        style: theme.textTheme.headlineMedium!.copyWith(
+                          color: theme.colorScheme.primary,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      content: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          ListTile(
+                            title: Text('selectLanguage'.tr),
+                            onTap: () {
+                              LanguageController languageController =
+                                  Get.find<LanguageController>();
+                              languageController.selectLanguage(
+                                languageController.selectedLanguage.value ==
+                                        'en'
+                                    ? 'ar'
+                                    : 'en',
+                              );
+                              Get.back();
+                            },
+                          ),
+                          ListTile(
+                            title: Text('changeTheme'.tr),
+                            onTap: () {
+                              ThemeController themeController =
+                                  Get.find<ThemeController>();
+                              themeController.toggleTheme();
+                              Get.back();
+                            },
+                          ),
+                        ],
+                      ),
+                      actions: [
+                        TextButton(
+                          onPressed: () => Navigator.pop(context),
+                          child: Text('Close'),
+                        ),
+                      ],
+                    ),
+              );
+            },
+          ),
+        ],
       ),
+
       body: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.all(padding),
@@ -43,13 +101,16 @@ class ShiftSchedulerView extends GetView<ShiftSchedulerScreenController> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          "Selected Month: ${DateFormat.yMMMM().format(controller.selectedDate.value)}",
+                          "${'selectedMonth'.tr}: ${DateFormat.yMMMM().format(controller.selectedDate.value)}",
                           style: theme.textTheme.bodyLarge!.copyWith(
                             color: theme.colorScheme.onPrimary,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        Icon(Icons.calendar_today, color: theme.colorScheme.onPrimary),
+                        Icon(
+                          Icons.calendar_today,
+                          color: theme.colorScheme.onPrimary,
+                        ),
                       ],
                     ),
                   ),
@@ -71,17 +132,27 @@ class ShiftSchedulerView extends GetView<ShiftSchedulerScreenController> {
                   decoration: InputDecoration(
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(12),
-                      borderSide: BorderSide(color: theme.primaryColor, width: 2),
+                      borderSide: BorderSide(
+                        color: theme.primaryColor,
+                        width: 2,
+                      ),
                     ),
                     labelText: 'enterPharmacistNames'.tr,
                     hintText: 'Each name on a new line',
                     prefixIcon: Icon(Icons.person, color: theme.primaryColor),
-                    suffixIcon: controller.pharmacistNameController.text.isNotEmpty
-                        ? IconButton(
-                            icon: Icon(Icons.clear, color: theme.primaryColor),
-                            onPressed: () => controller.pharmacistNameController.clear(),
-                          )
-                        : null,
+                    suffixIcon:
+                        controller.pharmacistNameController.text.isNotEmpty
+                            ? IconButton(
+                              icon: Icon(
+                                Icons.clear,
+                                color: theme.primaryColor,
+                              ),
+                              onPressed:
+                                  () =>
+                                      controller.pharmacistNameController
+                                          .clear(),
+                            )
+                            : null,
                   ),
                   style: TextStyle(fontSize: 16),
                 ),
@@ -101,7 +172,9 @@ class ShiftSchedulerView extends GetView<ShiftSchedulerScreenController> {
                 ),
 
                 // Schedule Button at the bottom
-                SizedBox(height: screenHeight * 0.1), // Add space before the Schedule button
+                SizedBox(
+                  height: screenHeight * 0.1,
+                ), // Add space before the Schedule button
                 Center(
                   child: _buildTextButton(
                     label: 'schedule'.tr,
@@ -112,7 +185,8 @@ class ShiftSchedulerView extends GetView<ShiftSchedulerScreenController> {
                       // Get.snackbar("scheduled".tr, "Your schedule has been set.");
                     },
                     context: context,
-                    isPrimary: true, // Use primary color for the schedule button
+                    isPrimary:
+                        true, // Use primary color for the schedule button
                   ),
                 ),
               ],
@@ -134,7 +208,10 @@ class ShiftSchedulerView extends GetView<ShiftSchedulerScreenController> {
     final theme = Theme.of(context);
     return TextButton.icon(
       onPressed: onPressed,
-      icon: Icon(icon, color: isPrimary ? theme.colorScheme.onPrimary : theme.primaryColor),
+      icon: Icon(
+        icon,
+        color: isPrimary ? theme.colorScheme.onPrimary : theme.primaryColor,
+      ),
       label: Text(
         label,
         style: TextStyle(

@@ -14,5 +14,14 @@
     "importFromExcel": "Import From Excel",
     "scheduled": "Scheduled",
     "notScheduled": "Not Scheduled",
-    "or": "or"
+    "or": "or",
+    "settings": "Settings",
+    "language": "Language",
+    "selectLanguage": "Select Language",
+    "english": "English",
+    "arabic": "Arabic",
+    "changeTheme": "Change Theme",
+    "selectedMonth": "Selected Month",
+    "shiftSchedule": "Shift Schedule",
+    "summaryView": "Summary View"
 }

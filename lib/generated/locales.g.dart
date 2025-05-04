@@ -27,6 +27,15 @@ class LocaleKeys {
   static const scheduled = 'scheduled';
   static const notScheduled = 'notScheduled';
   static const or = 'or';
+  static const settings = 'settings';
+  static const language = 'language';
+  static const selectLanguage = 'selectLanguage';
+  static const english = 'english';
+  static const arabic = 'arabic';
+  static const changeTheme = 'changeTheme';
+  static const selectedMonth = 'selectedMonth';
+  static const shiftSchedule = 'shiftSchedule';
+  static const summaryView = 'summaryView';
 }
 
 class Locales {
@@ -47,6 +56,15 @@ class Locales {
     'scheduled': 'Scheduled',
     'notScheduled': 'Not Scheduled',
     'or': 'or',
+    'settings': 'Settings',
+    'language': 'Language',
+    'selectLanguage': 'Select Language',
+    'english': 'English',
+    'arabic': 'Arabic',
+    'changeTheme': 'Change Theme',
+    'selectedMonth': 'Selected Month',
+    'shiftSchedule': 'Shift Schedule',
+    'summaryView': 'Summary View',
   };
   static const ar = {
     'pharmacist': 'صيدلي',
@@ -65,5 +83,14 @@ class Locales {
     'scheduled': 'مجدول',
     'notScheduled': 'غير مجدول',
     'or': 'او',
+    'settings': 'الاعدادات',
+    'language': 'اللغة',
+    'selectLanguage': 'اختر اللغة',
+    'english': 'الانجليزية',
+    'arabic': 'العربية',
+    'changeTheme': 'تغيير الثيم',
+    'selectedMonth': 'الشهر المحدد',
+    'shiftSchedule': 'جدول المناوبة',
+    'summaryView': 'عرض الملخص',
   };
 }

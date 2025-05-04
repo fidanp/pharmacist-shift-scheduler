@@ -10,7 +10,7 @@ class SummaryView extends GetView<SummaryController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('SummaryView'),
+        title:  Text('summaryView'.tr),
         centerTitle: true,
         actions: [
           IconButton(

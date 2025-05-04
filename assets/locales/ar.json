@@ -14,5 +14,14 @@
     "importFromExcel": "استيراد من Excel",
     "scheduled": "مجدول",
     "notScheduled": "غير مجدول",
-    "or": "او"
+    "or": "او",
+    "settings": "الاعدادات",
+    "language": "اللغة",
+    "selectLanguage": "اختر اللغة",
+    "english": "الانجليزية",
+    "arabic": "العربية",
+    "changeTheme": "تغيير الثيم",
+    "selectedMonth": "الشهر المحدد",
+    "shiftSchedule": "جدول المناوبة",
+    "summaryView": "عرض الملخص"
 }

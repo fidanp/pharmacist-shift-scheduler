@@ -12,7 +12,7 @@ class ScheduleView extends GetView<ScheduleController> {
     final theme = Theme.of(context);
 
     return Scaffold(
-      appBar: AppBar(title: const Text("Shift Schedule")),
+      appBar: AppBar(title:  Text("shiftSchedule".tr)),
       body: Obx(() {
         final schedule = controller.schedule;
 
