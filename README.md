@@ -28,6 +28,7 @@ The Pharmacist Shift Scheduler is an application designed to assign pharmacists 
 1. Open the app and input the list of pharmacists or import from excel with names of pharmacist on a column.
 2. Select the year and month for which you want to generate the shift schedule.
 3. View the shift assignments by selecting any day from the calendar.
+4. View the summary of month, total shifts, total morning afternoon evening and weekend shifts per pharmacist as a table and can export as a pdf report.
 
 ## Features
 - **Shift Assignment**: Fair distribution of Morning, Afternoon, and Evening shifts.
