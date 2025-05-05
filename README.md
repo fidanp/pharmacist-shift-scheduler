@@ -46,37 +46,23 @@ The app supports any number of pharmacists and dynamically adjusts the schedule 
 - Weekends are assigned based on availability rather than preference.
 
 ## Scheduling Algorithm
-The goal of this scheduling algorithm is to fairly assign pharmacists to shifts, ensuring that each one works an equal number of shifts throughout the month. The algorithm uses a round-robin approach, ie it rotates through the list of pharmacists to assign them to different shifts each day.
+The shift scheduling algorithm aims to distribute shifts fairly among pharmacists, balancing both daily shift coverage and overall shift distribution throughout the month.
 
-Initialization:
+1.  **Initialization:**
+    * The algorithm takes as input the list of pharmacists, the target month and year.
+    * It initializes a data structure to track the number of Morning, Afternoon, Evening, and Weekend shifts assigned to each pharmacist.
 
-The list of pharmacists is provided, along with the month and year for scheduling.
+2.  **Daily Shift Assignment:**
+    * For each day of the month, the algorithm performs the following:
+        * **Determine Daily Targets:** Calculates the ideal number of pharmacists for each shift (Morning, Afternoon, Evening) for that day, aiming for an even distribution.
+        * **Prioritize Pharmacists:** Creates a list of pharmacists, sorted by the number of shifts they have worked the least.
+        * **Assign Shifts:** Iterates through the pharmacists and assigns them to shifts based on the following criteria:
+            * Prioritizes assigning a pharmacist to a shift that still needs coverage for that day.
+            * Among the available shifts for a given day, the algorithm attempts to assign the pharmacist to the shift type they have worked the least during the month.
+        * **Weekend Handling:** If the day is a Saturday or Sunday, the assigned shift is also counted as a 'Weekend' shift for that pharmacist to ensure fair weekend shift distribution.
 
-Each pharmacist’s shift counts are tracked (morning, afternoon, evening, and weekend shifts).
-
-Shift Distribution:
-
-For each day, need to assign pharmacists to morning, afternoon, and evening shifts.
-
-calculated how many shifts each pharmacist should work for a fair distribution.
-
-Round-Robin Assignment:
-
-The algorithm assigns shifts by going through the list of pharmacists one by one. It starts with the first pharmacist for the morning shift, then the next for the afternoon shift, and so on. Once all pharmacists have assigned a shift then loops back to the first pharmacist.
-
-This process helps ensure that the shifts are distributed as evenly as possible across all pharmacists.
-
-Weekend Shifts:
-
-If the day is a weekend (Saturday or Sunday), the algorithm ensures that weekend shifts are assigned fairly as well, without overloading any particular pharmacist.
-
-Handling Unassigned Pharmacists:
-
-After assigning pharmacists to the main shifts, if any pharmacist remains unassigned for the day, the algorithm checks the available shifts and assigns them accordingly, making sure to maintain fairness.
-
-Final Schedule:
-
-The final schedule for the entire month is generated, ensuring that each pharmacist works a similar number of shifts, including weekend shifts, while keeping the distribution as fair as possible.
+3.  **Output:**
+    * The algorithm generates a shift schedule for the entire month, aiming to balance daily shift coverage with a fair distribution of shift types (including weekend shifts) across all pharmacists.  The schedule is designed to prevent pharmacists from being consistently assigned to the same shift type.
 
 ## Screen recording
 https://drive.google.com/drive/folders/1wo-A59u0vYEGYOmtfpvUVmeU4jUWAuhF
