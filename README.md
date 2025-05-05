@@ -66,11 +66,11 @@ The shift scheduling algorithm aims to distribute shifts fairly among pharmacist
     * The algorithm generates a shift schedule for the entire month, aiming to balance daily shift coverage with a fair distribution of shift types (including weekend shifts) across all pharmacists.  The schedule is designed to prevent pharmacists from being consistently assigned to the same shift type.
 
 ## Screen recording
-https://drive.google.com/drive/folders/1wo-A59u0vYEGYOmtfpvUVmeU4jUWAuhF
+https://drive.google.com/drive/folders/1KkN32XnoA5cJdxAmOIJX54wT2VtBGoeQ
 
 ## APK
 release/app-release.apk
-https://drive.google.com/file/d/1CZcelbNzWN7xevYHRZirIVd1QgK_LgbV/view?usp=drive_link
+https://drive.google.com/file/d/1HGdt6PKFXYCVtOpjNgzDkrMKC7j8XPvU/view?usp=drive_link
 
 ## Tested
 Tested in both Android and iOS
